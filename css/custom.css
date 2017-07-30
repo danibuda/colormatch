@@ -1,13 +1,32 @@
-body,
+
+*{
+    /* font-family: 'Dosis', sans-serif; */
+    font-family: 'Poiret One', cursive;
+}
+    body,
 html {
-  background-color: #222;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+    background-color: #222;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.header{
+    color: #e40045;
+}
+.header h1{
+    font-weight: 700;
+}
+.upload{
+    z-index: 100;
+    padding: 5%;
+    margin-top: 10%;
+    background-color: #eee;
+    border-radius: 4px;
 }
 .input{
+    margin-top: 10%;
     text-align: center;
 }
 .file_upload{
@@ -28,7 +47,13 @@ html {
 .btn-upload:hover {
     color: #fff;
 }
+.btn-upload:focus {
+    color: #fff;
+}
 #particles-js{
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
 }
