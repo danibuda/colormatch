@@ -3,8 +3,7 @@
     /* font-family: 'Dosis', sans-serif; */
     font-family: 'Poiret One', cursive;
 }
-    body,
-html {
+body,html {
     background-color: #222;
     width: 100%;
     height: 100%;
@@ -12,29 +11,30 @@ html {
     margin: 0;
     overflow: hidden;
 }
+#particles-js{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+/*header*/
 .header{
-    color: #e40045;
+    margin-bottom: 20px;
 }
 .header h1{
+    color: #e40045;
     font-weight: 700;
 }
-.upload{
+/*ui*/
+.color_mood{
     z-index: 100;
     padding: 5%;
-    margin-top: 10%;
+    margin-top: 5%;
     background-color: #eee;
     border-radius: 4px;
 }
-.input{
-    margin-top: 10%;
-    text-align: center;
-}
-.file_upload{
-    display: block;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-}
+/*upload button*/
 .btn-upload {
     padding: 10px 60px;
     font-size: 20px;
@@ -43,6 +43,9 @@ html {
     background-color: #098CB2;
     border: 0;
     border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer; 
 }
 .btn-upload:hover {
     color: #fff;
@@ -50,10 +53,63 @@ html {
 .btn-upload:focus {
     color: #fff;
 }
-#particles-js{
-    position: absolute;
-    top: 0;
-    left:0;
+/*drag and drop*/
+#drop_zone_outer {
+    margin-bottom: 50px;
+    z-index: 100;
+    width: 300px;
+    height:200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+#drop_zone_inner {
+    font-weight: 400;
+    height: 180px;
+    border: 2px dashed #bbb;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 25px;
+    text-align: center;
+    color: #58636d;
+}
+/*output*/
+.thumb {
+    z-index: 100;
     width: 100%;
-    height: 100%;
+    height: auto;
+  }
+#list{
+    margin-bottom: 20px;
+}
+.splitImg {
+  padding: 1px;
+  background-clip: content-box;
+  background-repeat: no-repeat;
+}
+/*input*/
+#upload{
+    display: block;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+#upload_button{
+    margin-top: 20px;
+    margin-bottom: 20px;  
+    width: 100%; 
+}
+/*progress bar*/
+#percent{
+    border-radius: 4px;
+}
+#progress_bar {
+    z-index: 100;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    opacity: 0;
+}
+#progress_bar.loading {
+    opacity: 1.0;
 }
