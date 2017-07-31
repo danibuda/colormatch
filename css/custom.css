@@ -29,7 +29,7 @@ body,html {
 /*ui*/
 .color_mood{
     z-index: 100;
-    padding: 5%;
+    padding: 2%;
     margin-top: 5%;
     background-color: #eee;
     border-radius: 4px;
@@ -78,6 +78,7 @@ body,html {
     z-index: 100;
     width: 100%;
     height: auto;
+    max-width: 300px;
   }
 #list{
     margin-bottom: 20px;

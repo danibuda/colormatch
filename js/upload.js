@@ -32,7 +32,7 @@ function renderFiles(files){
             return function(e) {
                 // Render thumbnail.
                 var span = document.createElement('span');
-                    console.log(e.target.result);
+                    console.log(e.target);
                 var api = resemble(e.target.result).onComplete(function(data){
                 });
                 span.innerHTML = ['<img class="thumb" src="', e.target.result,
@@ -45,7 +45,7 @@ function renderFiles(files){
                 document.getElementById('list').insertBefore(span, null);
                 progress.style.width = '100%';
                 progress.textContent = '100%';
-                // setTimeout("document.getElementById('progress_bar').className='';", 6000);
+                setTimeout("document.getElementById('progress_bar').style.display = \"none\"", 6000);
             };
         })(f);
         // Read in the image file as a data URL.
